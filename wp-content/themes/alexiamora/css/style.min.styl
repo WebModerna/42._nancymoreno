@@ -1,0 +1,810 @@
+@import 'lib/nib'
+@import url(normalizador.css)
+/*Las variables*/
+azul_google = #166BEC
+blanco = rgb(235, 223, 240)
+blanco_grisaseo = #dedded
+gris = rgb(72,68,70)
+gris_transparente = rgba(76, 76, 76, 0.5)
+moradito_amarronado = #836056
+naranjarogizo = rgb(235,50,20)
+naranjatransparente = rgba(235,50,20,0.7)
+negro = #414141
+negro_transparente  = rgba(0,0,0,0.5)
+
+/*Las Funciones*/
+background-cover()
+	background-size cover
+	-o-background-size cover
+	-ms-background-size cover
+	-moz-background-size cover
+	-webkit-background-size cover
+border-radius()
+	border-radius arguments
+	-o-border-radius arguments
+	-ms-border-radius arguments
+	-moz-border-radius arguments
+	-webkit-border-radius arguments
+box-shadow()
+	box-shadow arguments
+	-o-box-shadow arguments
+	-ms-box-shadow arguments
+	-moz-box-shadow arguments
+	-webkit-box-shadow arguments
+box-sizing()
+	box-sizing border-box
+	-o-box-sizing border-box
+	-ms-box-sizing border-box
+	-moz-box-sizing border-box
+	-webkit-box-sizing border-box
+box-shadow_lindo()
+	box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-o-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-ms-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-moz-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+	-webkit-box-shadow 0px 1px 0px 0px rgba(255,255,255,0.5) inset, 0px -15px 15px 0px rgba(0,0,0,0.25) inset
+text-shadow()
+	text-shadow arguments
+	-o-text-shadow arguments
+	-ms-text-shadow arguments
+	-moz-text-shadow arguments
+	-webkit-text-shadow arguments
+text-shadow_lindo()
+	text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-o-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-ms-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-moz-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+	-webkit-text-shadow 0px -1px 0px rgba(0,0,0,0.25)
+transform()
+	transform arguments
+	-o-transform arguments
+	-ms-transform arguments
+	-moz-transform arguments
+	-webkit-transform arguments
+transition()
+	transition arguments
+	-o-transition arguments
+	-ms-transition arguments
+	-moz-transition arguments
+	-webkit-transition arguments
+/*Los Prerender*/
+@font-face
+	font-family 'icomoon'
+	src: url('data:application/x-font-ttf;charset=utf-8;base64,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') format('truetype'), url('data:application/font-woff;charset=utf-8;base64,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') format('woff');
+	font-weight normal
+	font-style normal
+
+@font-face
+	font-family 'Share Tech'
+	src url('fonts/sharetech.eot')
+	src url('fonts/sharetech.eot') format('embedded-opentype'),
+	url('fonts/sharetech.woff') format('woff'),
+	url('fonts/sharetech.ttf') format('truetype'),
+	url('fonts/sharetech.svg#ShareTechRegular') format('svg')
+
+
+@font-face
+	font-family 'Allan'
+	src url('fonts/allan.eot')
+	src url('fonts/allan.eot') format('embedded-opentype'),
+	url('fonts/allan.woff') format('woff'),
+	url('fonts/allan.ttf') format('truetype'),
+	url('fonts/allan.svg#AllanRegular') format('svg')
+
+/*Las etiquetas*/
+body
+	background blanco
+	color blanco
+	font-family 'Share Tech'
+	font-size 17px
+	text-align center
+/*los mensajes del Contact Form 7*/
+div
+	.wpcf7
+		margin 0
+		padding 0
+		div
+			.ajax-error
+				display none
+		img
+			.ajax-loader
+				border 0
+				margin-left 4px
+				vertical-align middle
+		.placeheld
+			color #888
+	.wpcf7-mail-sent-ok
+		border 2px solid #398f14
+	.wpcf7-mail-sent-ng
+		border 2px solid #f00
+	.wpcf7-response-output
+		margin 2em 0.5em 1em
+		padding 0.2em 1em
+	.wpcf7-spam-blocked
+		border 2px solid #ffa500
+	.wpcf7-validation-errors
+		border 2px solid #f7e700
+	
+span
+	.use-floating-validation-tip
+		span
+			.wpcf7-not-valid-tip
+				background #fff 
+				border 1px solid #f00 
+				left auto
+				padding 0.2em 0.8em
+				position absolute
+				right 20%
+				top 20% left 20%
+				z-index 100 
+
+	.wpcf7-display-none 
+		display none 
+	.wpcf7-form-control-wrap
+		position relative
+	.wpcf7-list-item
+		margin-left 0.5em
+		margin-left 0 
+		margin-right 0.5em 
+	.wpcf7-not-valid-tip
+		color #e33 
+		direction rtl
+		display block
+		font-size 1em
+/*Fin del contact Form 7*/
+form
+	background negro_transparente
+	margin 0 auto
+	max-width 400px
+	padding 1em
+
+	input
+	textarea
+		background negro_transparente
+		border none
+		box-sizing()
+		color blanco
+		font-family 'Share Tech'
+		font-size 1.2em
+		display block
+		margin 1em auto
+		padding 0.5em
+		width 95%
+		transition(all 0.3s ease-in)
+		&:focus
+			border 2px solid naranjarogizo
+			box-shadow(0px 0px 5px 2px naranjarogizo)
+
+	input[type="submit"]
+		display inline-block
+		margin 0
+		padding 0.5em 1em
+		width auto
+		&:hover
+			background naranjarogizo
+
+	.captcha
+		display inline-block
+		width 100px
+		vertical-align baseline
+
+footer
+	background naranjatransparente
+	color blanco
+	font-family 'Allan'
+	padding 1em
+
+	a
+		color #ddd
+		text-decoration none
+		&:hover
+		&:focus
+			text-decoration underline
+	address
+		font-style normal
+
+	ul
+		margin: 1.2em auto;
+		padding: 0.2em 0 0 0;
+
+		li
+			display inline-block
+			
+			a
+				color blanco
+				display block
+				font-family 'icomoon'
+				font-size 1.5em
+				padding 0 0.3em
+				text-decoration none
+				text-shadow_lindo()
+
+				&:focus
+				&:hover
+					color #bbb
+					text-decoration none
+
+	.ir_arriba
+		background naranjatransparente
+		border-radius(0.1em)
+		bottom 0.1em
+		color blanco
+		display inline-block
+		font-family monospace
+		font-size 1.5em
+		padding 0.3em 0.5em 0 0.5em
+		position fixed !important
+		right 0.1em
+		text-decoration none
+		transition(all 0.2s ease-in)
+		&:hover
+			background naranjarogizo
+
+h1, h2, h3, h4, h5, h6
+	font-family 'Allan'
+
+header
+	box-shadow(0px 1px 2px blanco)
+	border-bottom 1px solid negro
+	padding-bottom 1em
+	overflow hidden
+
+	a
+		display inline-block
+		
+		figure
+			margin 0 auto
+			width 100px
+			
+			img
+				width 100%
+
+			.logo_color
+				&:first-child
+					display none
+
+		
+		.foto_alexia
+			margin-bottom 0.2em			
+			
+			img
+				border 5px solid blanco
+				border-radius(3px)
+				box-shadow(2px 2px 5px #000)
+
+		.posicionada
+			transition(all 0.3s ease-in-out)
+			
+			&:hover
+			&:focus
+				transform rotateZ(18deg) rotateY(18deg)
+
+	h1.left
+		left 0.5em
+		position absolute
+		top 0.2em
+		margin 0
+	
+				
+	nav
+		z-index 124
+		ul
+			height 0
+			margin 0
+			opacity 0
+			padding 0
+			transition(all 0.4s ease-in-out)
+			visibility hidden
+			
+			li
+				
+				a
+					background naranjarogizo
+					color blanco
+					display block
+					font-family 'Allan'
+					font-size 1.2em
+					padding 0.5em 1em
+					text-align left
+					text-decoration none
+					text-shadow_lindo()
+					transition(all 0.4s ease-in-out)
+
+				a:hover
+					background moradito_amarronado
+			
+			.current-menu-item
+			.current_page_item
+				a
+					background gris
+
+			ul
+				display none
+				height auto
+				opacity 1
+				visibility visible
+
+		.boton_menu
+			background negro
+			overflow hidden
+			padding 0.2em 0.5em
+			
+			button
+				background transparent
+				border none
+				color blanco
+				float right
+				font-family 'Allan'
+				font-size 1.5em
+				display block
+				max-width 60px
+				img
+					width 100%
+
+	.encabezado
+			margin-top 2em
+			h2
+				color blanco
+				font-family 'Allan'
+				font-size 2em
+				font-weight lighter
+				margin 0
+				text-shadow_lindo()	
+
+section
+	article
+		padding 0.5em
+		
+			
+/*Los ids*/
+#wrapper
+	background url('../img/fondo_bg_800.jpg') center center repeat-y fixed
+	background-cover()
+/*Las clases*/
+.autor_fb a:before
+	content "\e604"
+
+.autor_feed a:before
+	content "\e601"
+
+.autor_google a:before
+	content "\e603"
+
+.autor_linkedin a:before
+	content "\e605"
+
+/*.autor_menu a:before
+	content "\e606"*/
+
+.autor_tw a:before
+	content "\e600"
+
+.autor_youtube a:before
+	content "\e602"
+
+.eventos
+	figure
+		border-radius(2px)
+
+.index
+	article
+		background negro_transparente
+		margin 1em auto
+
+.navegacion_posts
+.listado_comentarios
+	display block
+	padding 1em
+
+.navegacion_posts
+	text-align left
+	overflow hidden
+	a
+		color blanco
+		text-decoration none
+
+.posts
+	article
+		margin 1em auto
+		overflow hidden
+		
+		figure
+			background blanco
+			border 5px solid blanco
+			border-radius(3px)
+			box-shadow(2px 2px 5px #000)
+			margin 1em auto
+			max-width 300px
+
+			a
+				transition(all 0.2s linear)
+				&:hover
+					opacity 0.5
+
+			figcaption
+				padding 0.5em
+				font-family 'Allan'
+				color negro
+
+
+			img
+				width 100%
+
+		h2
+			a
+				color blanco
+				text-decoration none
+				&:hover
+				&:focus
+				&:active
+					text-decoration underline
+
+		.contenido
+			text-align left
+
+		.google_maps
+			color negro
+			display block
+			float none
+			max-width 100%
+
+		.img_full
+			display block
+			margin 1em auto
+			float none
+
+		.tags
+			background negro_transparente
+			display inline-block
+			padding 0.5em 1em
+			a
+				color blanco_grisaseo
+				text-decoration none
+				&:hover
+				&:focus
+				&:active
+					text-decoration underline
+
+	.fondo_oscuro
+		background negro_transparente
+
+.posts_inline
+	article
+		display block
+		margin 0.5em auto
+		overflow hidden
+		
+		figure
+			background blanco
+			border 5px solid blanco
+			border-radius(3px)
+			box-shadow(5px 5px 5px #000)
+			margin auto
+			max-width 300px
+
+			a
+				transition(all 0.2s linear)
+				&:hover
+					opacity 0.5
+			
+			figcaption
+				color negro
+				font-family 'Allan'
+				padding 0.5em 0
+			
+			img
+				width 100%
+
+.pagination
+	color negro
+	display block
+	margin 1em 0.5em
+	padding 0
+	
+	a
+	li
+		background blanco
+		border-radius(2px)
+		box-shadow(2px 2px 5px #000)
+		display inline
+		font-size 1.2em
+		margin 0 1px
+		padding 0.3em 0.5em
+		text-decoration none
+		text-shadow_lindo()
+
+	a
+		transition(all 0.4s ease)
+
+		&:hover
+		&:active
+		&:focus
+			background naranjarogizo
+			color blanco
+
+	.current
+		background blanco
+		color #999
+		padding 0.3em 0.5em
+
+.listado_comentarios
+	text-align left
+	a
+		color azul_google
+	
+	ol
+		padding 0
+		li
+			background negro_transparente
+			list-style none
+			padding 1em
+			a
+				color azul_google
+
+.tags
+	background negro_transparente
+	display inline-block
+	padding 0.5em 1em
+
+.ver_mas
+	background negro_transparente
+	color blanco
+	display inline-block
+	padding 0.5em 1em
+	text-decoration none
+	transition(all 0.3s ease-in-out)
+	&:hover
+	&:focus
+		background naranjarogizo
+		text-decoration none
+
+
+/*las mediaqueries*/
+@media all and (min-width: 400px)
+	header
+		.encabezado
+			margin-top 3em
+
+			h2
+				font-size 3em
+
+	#top_bar
+		display none
+		padding 0
+
+	#wrapper
+		background url('../img/fondo_bg_1400.jpg') top left repeat-y fixed
+		background-size 100%
+
+@media all and (max-width: 699px)
+	header
+		nav
+			ul
+				li
+					ul
+						display block
+						li
+							padding-left 1em
+
+				.current-menu-item
+				.current_page_item
+					ul
+						li
+							a
+								background naranjarogizo
+								&:hover
+								&:focus
+									background moradito_amarronado
+
+@media all and (min-width: 700px)
+	/*FancyBox v2.1.5*/
+	.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:0;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url('../img/fancybox_sprite.png')}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:.8;cursor:pointer;z-index:8060}#fancybox-loading div{width:44px;height:44px;background:url('../img/fancybox_loading.gif') center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url('../img/blank.gif');-webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible!important}.fancybox-lock{overflow:hidden!important;width:auto}.fancybox-lock body{overflow:hidden!important}.fancybox-lock-test{overflow-y:hidden!important}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url('../img/fancybox_overlay.png')}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll}.fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent;background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}
+	header
+		overflow hidden
+		a
+			figure
+				width 150px
+
+		h1.left
+			top 1.5em
+		
+
+		nav
+			text-align right
+			overflow hidden
+			position fixed !important
+			right 0
+			top 1px
+			
+			ul
+				height auto
+				opacity 1
+				visibility visible
+
+				li
+					display inline-block
+					ul
+						display none
+
+					a
+						background none
+						&:hover
+						&:focus
+							background none
+							color naranjarogizo
+
+					&:hover
+					&:focus						
+						ul
+							display block
+							position fixed
+							background negro_transparente
+							li
+								display block
+								a
+									display block
+
+				.current-menu-item
+				.current_page_item
+					a
+						border-bottom 4px solid rgba(white, 0.3)
+						background none
+
+					&:hover
+					&:focus
+						ul
+							li
+								background negro_transparente
+								color blanco
+								a
+									border-bottom none !important
+								
+
+		.encabezado			
+			h2
+				font-size 4em
+
+		.boton_menu
+			display none
+
+	section
+		margin 0 auto
+		max-width 1200px
+			
+	#wrapper
+		background url('../img/fondo_bg.jpg') top left repeat-y fixed
+		background-cover()
+
+	.index
+		max-width 800px
+		article
+			background negro_transparente
+			margin 1em auto
+
+	.posts
+		article
+			figure
+				border 1em solid blanco
+				float left
+				margin 0em 2em 1em 1em
+
+			.galeria_fotos
+				margin 1em auto
+				overflow hidden
+				padding auto
+				text-align center
+				width 100%
+				
+				figure
+					display inline-block
+					float none
+					margin 0.5em 0.35em
+					max-width 290px
+					a
+						display block
+
+			.img_full
+				max-width 500px
+
+			.nota_completa
+				max-width 500px
+
+			.tags			
+				display block
+				text-align right !important
+
+	.posts_inline
+		article
+			display inline-block
+			vertical-align top
+			
+			figure
+				border 1em solid blanco
+
+@media only screen and (min-width: 1000px)
+	.posts
+		article
+			padding 1em 5em
+
+			.img_full
+				max-width 700px
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (-moz-min-device-pixel-ratio:1.5), only screen and (-ms-min-device-pixel-ratio:1.5), only screen and (-o-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5)
+		#fancybox-loading
+		.fancybox-close
+		.fancybox-prev span
+		.fancybox-next span
+			background-image url('../img/fancybox_sprite@2x.png')
+			background-size 44px 152px
+		
+		#fancybox-loading div
+			background-image url('../img/fancybox_loading@2x.gif')
+			background-size 24px 24px
+
+@media only print
+	form
+		border 1px solid #ddd
+		input
+		textarea
+			border 1px solid #ddd
+
+	footer
+		a
+			text-decoration underline
+			color #666
+
+		ul
+			li
+				margin 0 1em
+				text-align left
+				
+				a
+					text-shadow( none )
+		
+		.ir_arriba
+			display none
+	
+	header
+		a
+			figure
+				.logo_color
+					display none
+					
+					&:first-child
+						display block
+
+		nav
+			display none
+		
+		.encabezado
+			margin-top 0
+			font-size 16px
+			h2
+				font-size 1.2em
+
+			h1.left
+				top 0
+				left 0
+
+
+	.posts
+	.posts_inline
+		article
+			figure
+				border 1px solid #ddd
+				box-shadow( none )
+		
+			.tags
+				border-bottom 1px solid #ddd !important
+				
+			.ver_mas
+				display none
+
+		.listado_comentarios
+		.navegacion_posts
+			display none
+
+
+.addtoany_share_save_container{clear:both;margin:16px 0}.addtoany_list{display:inline;line-height:16px}.addtoany_list a{display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle}.addtoany_list a img{border:0;height:auto;opacity:1;overflow:hidden;vertical-align:top;width:auto}.addtoany_list.a2a_kit_size_32 a{font-size:32px}.addtoany_list.a2a_kit_size_32 a span{border-radius:4px;display:inline-block;height:32px;line-height:32px;opacity:1;width:32px}.addtoany_list a:hover img,.addtoany_list a:hover span{opacity:.7}.addtoany_list a.addtoany_special_service:hover img,.addtoany_list a.addtoany_special_service:hover span{opacity:1}.addtoany_special_service{display:inline-block;vertical-align:middle}.addtoany_special_service a,.addtoany_special_service div,.addtoany_special_service iframe,.addtoany_special_service span{margin:0;vertical-align:baseline}.addtoany_special_service iframe{max-width:none}a.addtoany_share_save img{border:0;width:auto;height:auto}

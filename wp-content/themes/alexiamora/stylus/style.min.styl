@@ -1,0 +1,647 @@
+@import 'normalize.styl'
+@import 'fonts.styl'
+@import 'icomoon.styl'
+@import 'formulas.styl'
+
+// Estilos del formulario de Contact Form 7
+@import 'styles.styl'
+@import 'styles-rtl.styl'
+
+/*Las etiquetas*/
+body
+	background blanco
+	color blanco
+	font-family 'Share Tech', sans-serif
+	font-size 17px
+	text-align center
+
+form
+	background negro_transparente
+	margin 0 auto
+	max-width 400px
+	padding 1em
+
+	input
+	textarea
+		background negro_transparente
+		border none
+		box-sizing()
+		color blanco
+		font-family 'Share Tech'
+		font-size 1.2em
+		display block
+		margin 1em auto
+		padding 0.5em
+		width 95%
+		transition(all 0.3s ease-in)
+		&:focus
+			// border 2px solid naranjarogizo
+			box-shadow(0px 0px 5px 2px naranjarogizo)
+
+	input[type="submit"]
+	input[type="reset"]
+		display inline-block
+		margin 0
+		padding 0.5em 1em
+		width auto
+		&:hover
+			background naranjarogizo
+
+	.captcha
+		display inline-block
+		width 100px
+		vertical-align baseline
+
+footer
+	background naranjatransparente
+	color blanco
+	font-family 'Allan'
+	padding 1em
+
+	a
+		color #ddd
+		text-decoration none
+		&:hover
+		&:focus
+			text-decoration underline
+	address
+		font-style normal
+
+	ul
+		margin: 1.2em auto;
+		padding: 0.2em 0 0 0;
+		li
+			display inline-block
+			a
+				color blanco
+				display block
+				font-family 'icomoon'
+				font-size 1.5em
+				padding 0 0.3em
+				text-decoration none
+				text-shadow_lindo()
+				&:focus
+				&:hover
+					color #bbb
+					text-decoration none
+
+	#ir_arriba
+		background naranjatransparente
+		border-radius(0.1em)
+		bottom 0.1em
+		color blanco
+		display inline-block
+		font-family monospace
+		font-size 1.5em
+		padding 0.3em 0.5em 0 0.5em
+		position fixed !important
+		right 0.1em
+		text-decoration none
+		transition(all 0.2s ease-in)
+		&:hover
+			background naranjarogizo
+			opacity 1 !important
+			text-decoration none
+		&:focus
+		&:active
+			text-decoration none
+
+h1, h2, h3, h4, h5, h6
+	font-family 'Allan'
+
+header
+	box-shadow(0px 1px 2px blanco)
+	border-bottom 1px solid negro
+	padding-bottom 1em
+	overflow hidden
+	position relative
+	a
+		display inline-block
+		figure
+			margin 0 auto
+			width 100px
+			img
+				width 100%
+
+			.logo_color
+				&:first-child
+					display none
+
+
+		.foto_alexia
+			margin-bottom 0.2em
+			img
+				border 5px solid blanco
+				border-radius(3px)
+				box-shadow(2px 2px 5px #000)
+
+		.posicionada
+			transition(all 0.3s ease-in-out)
+			&:hover
+			&:focus
+				transform rotateZ(18deg) rotateY(18deg)
+
+	h1.left
+		left 0.5em
+		position absolute
+		top 0.2em
+		margin 0
+
+section
+	article
+		padding 0.5em
+
+// Los ids
+#wrapper
+	// background url('../img/fondo_bg_800.jpg') center center repeat-y fixed
+	background-cover()
+
+// Las clases
+.boton_menu
+	background negro
+	overflow hidden
+	padding 0.2em 0.5em
+	button
+		background transparent
+		border none
+		color blanco
+		float right
+		font-family 'Allan'
+		font-size 1.5em
+		display block
+		max-width 60px
+		img
+			width 100%
+.clearfix
+	&:before
+	&:after
+		clear both
+		content ""
+		display table
+		width 100%
+.encabezado
+		margin-top 2em
+		h2
+			color blanco
+			font-family 'Allan'
+			font-size 2em
+			font-weight lighter
+			margin 0
+			text-shadow_lindo()
+
+.eventos
+	figure
+		border-radius(2px)
+
+.index
+	article
+		background negro_transparente
+		margin 1em auto
+
+.navegacion_principal
+	height 0
+	margin 0
+	opacity 0
+	padding 0
+	transition(opacity 0.2s ease-in-out)
+	visibility hidden
+	li
+		a
+			background naranjarogizo
+			color blanco
+			display block
+			font-family 'Allan'
+			font-size 1.2em
+			padding 0.5em 1em
+			text-align left
+			text-decoration none
+			text-shadow_lindo()
+			transition(all 0.1s ease-in-out)
+
+		a:hover
+			background moradito_amarronado
+	li + li
+		border-top 1px solid gris
+
+	.current-menu-item
+	.current_page_item
+		a
+			background gris
+
+	.sub-menu
+		display none
+		height inherit
+		margin 0
+		opacity inherit
+		visibility inherit
+		li:first-child
+			border-top 1px solid gris
+
+.navegacion--abrir
+	height auto
+	opacity 1
+	visibility visible
+.navegacion--cerrar
+	height 0
+	opacity 0
+	visibility hidden
+
+.navegacion_posts
+.listado_comentarios
+	display block
+	padding 1em
+
+.navegacion_posts
+	text-align left
+	overflow hidden
+	a
+		color blanco
+		text-decoration none
+
+.posts
+	article
+		margin 1em auto
+		overflow hidden
+		figure
+			background blanco
+			border 5px solid blanco
+			border-radius(3px)
+			box-shadow(2px 2px 5px #000)
+			margin 1em auto
+			max-width 300px
+			a
+				transition(all 0.2s linear)
+				&:hover
+					opacity 0.5
+			figcaption
+				padding 0.5em
+				font-family 'Allan'
+				color negro
+			img
+				width 100%
+
+		h2
+			a
+				color blanco
+				text-decoration none
+				&:hover
+				&:focus
+				&:active
+					text-decoration underline
+
+		.contenido
+			overflow hidden
+			text-align left
+
+		.img_full
+			display block
+			margin 1em auto
+			float none
+
+		.tags
+			background negro_transparente
+			display inline-block
+			padding 0.5em 1em
+			a
+				color blanco_grisaseo
+				text-decoration none
+				&:hover
+				&:focus
+				&:active
+					text-decoration underline
+
+	.fondo_oscuro
+		background negro_transparente
+		position relative
+
+.posts_inline
+	article
+		display block
+		margin 0.5em auto
+		overflow hidden
+		figure
+			background blanco
+			border 5px solid blanco
+			border-radius(3px)
+			box-shadow(5px 5px 5px #000)
+			margin auto
+			max-width 300px
+			a
+				transition(all 0.2s linear)
+				&:hover
+					opacity 0.5
+			figcaption
+				color negro
+				font-family 'Allan'
+				padding 0.5em 0
+			img
+				width 100%
+
+.pagination
+	color negro
+	display block
+	margin 1em 0.5em
+	padding 0
+	a
+	li
+		background blanco
+		border-radius(2px)
+		box-shadow(2px 2px 5px #000)
+		display inline-block
+		font-size 1.2em
+		margin 1px
+		padding 0.3em 0.5em
+		text-decoration none
+		text-shadow_lindo()
+	a
+		transition(all 0.4s ease)
+		&:hover
+		&:active
+		&:focus
+			background naranjarogizo
+			color blanco
+
+	.current
+		background blanco
+		color #999
+		padding 0.3em 0.5em
+
+.listado_comentarios
+	text-align left
+	a
+		color azul_google
+	ol
+		padding 0
+		li
+			background negro_transparente
+			list-style none
+			padding 1em
+			a
+				color azul_google
+
+.tags
+	background negro_transparente
+	display inline-block
+	padding 0.5em 1em
+
+.ver_mas
+	background negro_transparente
+	color blanco
+	display inline-block
+	padding 0.5em 1em
+	text-decoration none
+	transition(all 0.3s ease-in-out)
+	&:hover
+	&:focus
+		background naranjarogizo
+		text-decoration none
+
+.posts article figure.google_maps
+	border none
+	border-radius 0
+	box-shadow none
+	background none
+	color negro
+	display block
+	float none
+	max-width 100%
+	margin 1em auto
+
+	figcaption
+		color blanco_grisaseo
+
+	.cpm-map
+		border 0.5em solid blanco_grisaseo
+		border-radius 0.25em
+		box-shadow(5px 5px 5px #000)
+
+/*las mediaqueries*/
+@media all and (min-width: 400px)
+	header
+		.encabezado
+			margin-top 3em
+
+			h2
+				font-size 3em
+
+	#top_bar
+		display none
+		padding 0
+
+	#wrapper
+		// background url('../img/fondo_bg_1400.jpg') top left repeat-y fixed
+		background-size 100%
+
+@media all and (max-width: 699px)
+	.navegacion_principal
+		.current-menu-item
+		.current_page_item
+			.sub-menu
+				li
+					a
+						background naranjarogizo
+						&:hover
+						&:focus
+							background moradito_amarronado
+		.sub-menu
+			display block
+			li
+				padding-left 1em
+
+@media only screen and (min-width: 700px)
+	@import 'fancybox.styl'
+
+@media all and (min-width: 700px)
+	header
+		overflow visible
+		a
+			figure
+				width 150px
+
+		h1.left
+			top 1.5em
+
+	section
+		margin 0 auto
+		max-width 1200px
+
+	#wrapper
+		// background url('../img/fondo_bg.jpg') top left repeat-y fixed
+		background-cover()
+
+	.boton_menu
+		display none
+
+	.encabezado
+		h2
+			font-size 4em
+
+	.index
+		max-width 800px
+		article
+			background negro_transparente
+			margin 1em auto
+
+	.navegacion
+		text-align right
+
+	.navegacion_principal
+		height auto
+		opacity 1
+		visibility visible
+		li
+			display inline-block
+			a
+				background none
+				&:hover
+				&:focus
+					background none
+					color naranjarogizo
+			.sub-menu
+				display none
+				height inherit
+				margin 0
+				opacity inherit
+				padding 0
+				visibility inherit
+				z-index 321
+				li:first-child
+					border-top none
+				li + li
+						border-top 1px solid gris
+			&:hover
+			&:focus
+				position relative
+				.sub-menu
+					display block
+					position absolute
+					background negro_transparente
+					left 0
+					li
+						display block
+						a
+							display block
+		li + li
+			border-top none
+
+		.current-menu-item
+		.current_page_item
+			a
+				border-bottom 4px solid rgba(white, 0.3)
+				background none
+
+			&:hover
+			&:focus
+				.sub-menu
+					li
+						background negro_transparente
+						color blanco
+						a
+							border-bottom none !important
+
+	.posts
+		article
+			figure
+				border 1em solid blanco
+				float left
+				margin 0em 2em 1em 1em
+
+			.galeria_fotos
+				margin 1em auto
+				overflow hidden
+				padding auto
+				text-align center
+				width 100%
+				figure
+					display inline-block
+					float none
+					margin 0.5em 0.35em
+					min-width 290px
+					a
+						display block
+
+			.img_full
+				max-width 500px
+
+			.nota_completa
+				max-width 500px
+
+			.tags
+				display block
+				text-align right !important
+
+	.posts_inline
+		article
+			display inline-block
+			vertical-align top
+			figure
+				border 1em solid blanco
+
+@media only screen and (min-width: 1000px)
+	.posts
+		article
+			padding 1em 5em
+
+			.img_full
+				max-width 700px
+
+@media only print
+	form
+		border 1px solid #ddd
+		input
+		textarea
+			border 1px solid #ddd
+
+	footer
+		a
+			text-decoration underline
+			color #666
+
+		ul
+			li
+				margin 0 1em
+				text-align left
+				a
+					text-shadow( none )
+
+		#ir_arriba
+			display none
+
+	header
+		a
+			figure
+				.logo_color
+					display none
+					&:first-child
+						display block
+
+		.navegacion
+			display none
+
+		.encabezado
+			margin-top 0
+			font-size 16px
+			h2
+				font-size 1.2em
+
+			h1.left
+				top 0
+				left 0
+
+
+	.posts
+	.posts_inline
+		article
+			figure
+				border 1px solid #ddd
+				box-shadow( none )
+
+			.tags
+				border-bottom 1px solid #ddd !important
+
+			.ver_mas
+				display none
+
+		.listado_comentarios
+		.navegacion_posts
+			display none

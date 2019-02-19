@@ -1,0 +1,511 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Alexia Mora 1.0\n"
+"POT-Creation-Date: 2015-08-01 13:03-0300\n"
+"PO-Revision-Date: 2015-08-01 13:08-0300\n"
+"Last-Translator: Edgardo Raúl Galletto | WebModerna <info@webmoderna.com."
+"ar>\n"
+"Language-Team: WebModerna <info@webmoderna.com.ar>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: F:\\wamp\\www\\36._alexiamora\\wp-content\\themes\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: alexiamora\n"
+
+#: alexiamora/404.php:8
+msgid "Error 404."
+msgstr "Error 404."
+
+#: alexiamora/404.php:13
+msgid ""
+"No entiendo qué estás buscando. Cualquiera! Intentá de nuevo, pero bien...ok?"
+msgstr ""
+
+#: alexiamora/404.php:16 alexiamora/archive-obra.php:53
+#: alexiamora/archive-obra.php:61 alexiamora/category.php:52
+#: alexiamora/category.php:60 alexiamora/eventos.php:37
+#: alexiamora/eventos.php:45 alexiamora/header.php:107 alexiamora/index.php:39
+#: alexiamora/index.php:47 alexiamora/obras.php:42 alexiamora/obras.php:51
+#: alexiamora/prensa.php:33 alexiamora/single-default.php:21
+#: alexiamora/single-default.php:29 alexiamora/single-eventos.php:22
+#: alexiamora/single-eventos.php:30 alexiamora/single-obras.php:22
+#: alexiamora/single-obras.php:30 alexiamora/single-post_type_obra.php:31
+#: alexiamora/single-post_type_obra.php:40 alexiamora/tag.php:52
+#: alexiamora/tag.php:60 alexiamora/taxonomy-taxonomia_obras.php:55
+#: alexiamora/taxonomy-taxonomia_obras.php:63
+#, fuzzy
+msgid "Sin imagen"
+msgstr "No image"
+
+#: alexiamora/404.php:19
+#, fuzzy
+msgid "Publicado el: ¿...? Tu dirás?"
+msgstr "Published on: "
+
+#: alexiamora/404.php:27 alexiamora/archive-obra.php:75
+#: alexiamora/category.php:74 alexiamora/eventos.php:59
+#: alexiamora/single-default.php:42 alexiamora/single-eventos.php:43
+#: alexiamora/tag.php:74
+#, fuzzy
+msgid "Etiquetas: Ninguna"
+msgstr "Tags"
+
+#: alexiamora/archive-obra.php:8
+#, fuzzy
+msgid "Listado de obras clasificadas por..."
+msgstr "Search artisctic pictures"
+
+#: alexiamora/archive-obra.php:15 alexiamora/category.php:15
+#: alexiamora/tag.php:15 alexiamora/taxonomy-taxonomia_obras.php:16
+#, fuzzy
+msgid "Etiqueta "
+msgstr "Tags: "
+
+#: alexiamora/archive-obra.php:17 alexiamora/archive-obra.php:20
+#: alexiamora/category.php:17 alexiamora/category.php:20 alexiamora/tag.php:17
+#: alexiamora/tag.php:20 alexiamora/taxonomy-taxonomia_obras.php:18
+#: alexiamora/taxonomy-taxonomia_obras.php:21
+msgid "Archivo para "
+msgstr "Archive for"
+
+#: alexiamora/archive-obra.php:22 alexiamora/category.php:22
+#: alexiamora/tag.php:22 alexiamora/taxonomy-taxonomia_obras.php:23
+msgid "Archivo del autor"
+msgstr ""
+
+#: alexiamora/archive-obra.php:24 alexiamora/category.php:24
+#: alexiamora/tag.php:24 alexiamora/taxonomy-taxonomia_obras.php:25
+msgid "Archivos del blog"
+msgstr ""
+
+#: alexiamora/archive-obra.php:67 alexiamora/category.php:66
+#: alexiamora/eventos.php:51 alexiamora/index.php:53 alexiamora/prensa.php:38
+#: alexiamora/single-default.php:34 alexiamora/single-eventos.php:35
+#: alexiamora/tag.php:66
+#, fuzzy
+msgid "Publicado el: "
+msgstr "Published on: "
+
+#: alexiamora/archive-obra.php:81 alexiamora/category.php:80
+#: alexiamora/eventos.php:65 alexiamora/index.php:61 alexiamora/prensa.php:46
+#: alexiamora/tag.php:80
+msgid "Ver más..."
+msgstr "View more..."
+
+#: alexiamora/archive-obra.php:90 alexiamora/category.php:89
+#: alexiamora/tag.php:89
+#, fuzzy
+msgid ""
+"No hay ningún artículo con esta etiqueta que se haya publicado hasta ahora."
+msgstr "No form published at this moment"
+
+#: alexiamora/biografia.php:15
+msgid "Biografía"
+msgstr ""
+
+#: alexiamora/category.php:8 alexiamora/tag.php:8
+msgid "Listado de artículos clasificados por Etiquetas"
+msgstr ""
+
+#: alexiamora/comments.php:3
+#, fuzzy
+msgid "Por favor, no cargues esta página directamente. Gracias :-D"
+msgstr "Please. Don't load this page directly. Thanks! :-D"
+
+#: alexiamora/comments.php:5
+#, fuzzy
+msgid ""
+"Esta publicación está protegida con contraseña. Ingresá tu usuario y tu "
+"password para ver los comentarios."
+msgstr ""
+"This post is protected by password. Login width your user and pass to see "
+"the comments."
+
+#: alexiamora/comments.php:11
+#, fuzzy
+msgid "No hay respuestas"
+msgstr "No responses"
+
+#: alexiamora/comments.php:11
+#, fuzzy
+msgid "Una Respuesta"
+msgstr "One response"
+
+#: alexiamora/comments.php:11
+#, fuzzy
+msgid "% Respuestas"
+msgstr "% Responses"
+
+#: alexiamora/comments.php:26
+#, fuzzy
+msgid "Los comentarios están cerrados"
+msgstr "The comments are closed"
+
+#: alexiamora/comments.php:31
+#, fuzzy
+msgid "Dejar un Comentario"
+msgstr "Leave a comment"
+
+#: alexiamora/comments.php:31
+#, fuzzy, php-format
+msgid "Dejar un Comentario a %s"
+msgstr "Leave a comment to %s"
+
+#: alexiamora/comments.php:36
+#, fuzzy
+msgid "Debes estar"
+msgstr "You must be"
+
+#: alexiamora/comments.php:36
+#, fuzzy
+msgid "logueado"
+msgstr "logged in"
+
+#: alexiamora/comments.php:36
+#, fuzzy
+msgid "para publicar un comentario"
+msgstr "for publishing a comment"
+
+#: alexiamora/comments.php:40
+#, fuzzy
+msgid "Logueado como"
+msgstr "Logged as"
+
+#: alexiamora/comments.php:40
+#, fuzzy
+msgid "Desloguearse »"
+msgstr "Log out »"
+
+#: alexiamora/comments.php:42
+#, fuzzy
+msgid "Apellido y Nombre"
+msgstr "Full name"
+
+#: alexiamora/comments.php:43
+#, fuzzy
+msgid "E-Mail. No será publicado"
+msgstr "E-Mail. It won't be published"
+
+#: alexiamora/comments.php:46
+#, fuzzy
+msgid "Comentario"
+msgstr "Comment"
+
+#: alexiamora/comments.php:47
+#, fuzzy
+msgid "Enviar Comentario"
+msgstr "Sent comment"
+
+#: alexiamora/contacto.php:19
+msgid "No hay ningún formulario publicado hasta ahora."
+msgstr "No form published at this moment"
+
+#: alexiamora/eventos.php:9
+msgid "Eventos"
+msgstr ""
+
+#: alexiamora/eventos.php:74
+#, fuzzy
+msgid "No hay ninguna evento publicado hasta ahora."
+msgstr "No form published at this moment"
+
+#: alexiamora/footer.php:4
+msgid "Síguenos en: "
+msgstr "Follow us on:"
+
+#: alexiamora/footer.php:13
+#, fuzzy
+msgid "Noticias Rss"
+msgstr "Feeds Rss"
+
+#: alexiamora/footer.php:37
+#, fuzzy
+msgid ". Todos los derechos reservados."
+msgstr ". All rights reserveds."
+
+#: alexiamora/functions.php:220
+#, fuzzy
+msgid "Menú Principal"
+msgstr "Main Menu"
+
+#: alexiamora/functions.php:221
+#, fuzzy
+msgid "Menú Secundario"
+msgstr "Secondary Menu"
+
+#: alexiamora/functions.php:267 alexiamora/functions.php:275
+#: alexiamora/functions.php:283
+msgid "Subir las fotos del producto desde aquí"
+msgstr "Upload photos from here"
+
+#: alexiamora/functions.php:347 alexiamora/functions.php:358
+msgid "Quitar fila"
+msgstr "Delete row"
+
+#: alexiamora/functions.php:356
+msgid "Seleccionar imagen"
+msgstr "Select image"
+
+#: alexiamora/functions.php:357
+msgid "Eliminar imagen"
+msgstr "Delete image"
+
+#: alexiamora/functions.php:363
+msgid " Agregar Imagen"
+msgstr " Add image"
+
+#: alexiamora/functions.php:404
+#, fuzzy
+msgid "Página"
+msgstr "Page"
+
+#: alexiamora/functions.php:405
+#, fuzzy
+msgid "de"
+msgstr "of"
+
+#: alexiamora/functions.php:458
+#, fuzzy
+msgid "¡Sal de mi jardín! ¡AHORA MISMO!"
+msgstr "Get out from my garden! RIGHT NOW!"
+
+#: alexiamora/functions.php:549 alexiamora/functions.php:568
+#: alexiamora/single-obras.php:9 alexiamora/single-post_type_obra.php:9
+#: alexiamora/taxonomy-taxonomia_obras.php:8
+#, fuzzy
+msgid "Obras Artísticas"
+msgstr "Search artisctic pictures"
+
+#: alexiamora/functions.php:550 alexiamora/functions.php:601
+#: alexiamora/functions.php:682
+msgid "Item superior:"
+msgstr ""
+
+#: alexiamora/functions.php:551
+#, fuzzy
+msgid "Todas las obras"
+msgstr "Search artisctic pictures"
+
+#: alexiamora/functions.php:552
+#, fuzzy
+msgid "Ver obra"
+msgstr "Edit artistic picture"
+
+#: alexiamora/functions.php:553
+#, fuzzy
+msgid "Agregar nueva obra"
+msgstr "Edit artistic picture"
+
+#: alexiamora/functions.php:554
+#, fuzzy
+msgid "Agregar nueva"
+msgstr " Add image"
+
+#: alexiamora/functions.php:555
+#, fuzzy
+msgid "Editar obra"
+msgstr "Edit artistic picture"
+
+#: alexiamora/functions.php:556
+#, fuzzy
+msgid "Actualizar obra"
+msgstr "Edit artistic picture"
+
+#: alexiamora/functions.php:557
+#, fuzzy
+msgid "Buscar alexiamora"
+msgstr "Search artisctic pictures"
+
+#: alexiamora/functions.php:558
+#, fuzzy
+msgid "No hay nada"
+msgstr "No responses"
+
+#: alexiamora/functions.php:559
+#, fuzzy
+msgid "No hay nada en la papelera"
+msgstr "No post published in this section."
+
+#: alexiamora/functions.php:569
+#, fuzzy
+msgid "Listado de obras artísticas"
+msgstr "Search artisctic pictures"
+
+#: alexiamora/functions.php:598
+#, fuzzy
+msgid "Categorías de Obras"
+msgstr "Search artisctic pictures"
+
+#: alexiamora/functions.php:599
+#, fuzzy
+msgid "Todos las categorías"
+msgstr ". All rights reserveds."
+
+#: alexiamora/functions.php:600
+msgid "Item superior"
+msgstr ""
+
+#: alexiamora/functions.php:602
+#, fuzzy
+msgid "Nuevo nombre de item"
+msgstr "Full name"
+
+#: alexiamora/functions.php:603
+msgid "Agregar nuevo item"
+msgstr " Add new item"
+
+#: alexiamora/functions.php:604
+msgid "Editar item"
+msgstr "Edit item"
+
+#: alexiamora/functions.php:605
+msgid "Actualizar item"
+msgstr ""
+
+#: alexiamora/functions.php:606
+#, fuzzy
+msgid "Separar items con comas"
+msgstr ""
+"This post is protected by password. Login width your user and pass to see "
+"the comments."
+
+#: alexiamora/functions.php:607
+msgid "Buscar items"
+msgstr "Search items"
+
+#: alexiamora/functions.php:608
+msgid "Agregar o remover items"
+msgstr "Add o remove items"
+
+#: alexiamora/functions.php:609
+msgid "Elegir el item más usado"
+msgstr "Popular item"
+
+#: alexiamora/functions.php:610
+msgid "No hay items."
+msgstr "No items."
+
+#: alexiamora/functions.php:643
+msgid "Técnica utilzada"
+msgstr ""
+
+#: alexiamora/functions.php:645
+msgid "Ancho en centímetros"
+msgstr ""
+
+#: alexiamora/functions.php:647
+msgid "Alto en centímetros"
+msgstr ""
+
+#: alexiamora/functions.php:681 alexiamora/single-eventos.php:9
+msgid "Eventos Artísticos"
+msgstr ""
+
+#: alexiamora/functions.php:683
+msgid "Todos los eventos"
+msgstr "All events"
+
+#: alexiamora/functions.php:684
+msgid "Ver evento"
+msgstr "View event"
+
+#: alexiamora/functions.php:685
+msgid "Agregar un nuevo evento"
+msgstr " Add new event"
+
+#: alexiamora/functions.php:686
+msgid "Agregar nuevo"
+msgstr " Add new"
+
+#: alexiamora/functions.php:687
+msgid "Editar evento"
+msgstr ""
+
+#: alexiamora/functions.php:688
+msgid "Actualizar evento"
+msgstr ""
+
+#: alexiamora/functions.php:689
+msgid "Buscar eventos"
+msgstr "Search events"
+
+#: alexiamora/functions.php:690
+msgid "No hay eventos"
+msgstr "No events."
+
+#: alexiamora/functions.php:691
+msgid "No hay eventos en la papelera"
+msgstr "No events in trash."
+
+#: alexiamora/functions.php:700
+msgid "eventos"
+msgstr ""
+
+#: alexiamora/functions.php:701
+msgid "Eventos artísticos a realizarse"
+msgstr ""
+
+#: alexiamora/header.php:16
+msgid "Error 404"
+msgstr "Error 404"
+
+#: alexiamora/index.php:70 alexiamora/single-default.php:68
+msgid "No hay nada publicado hasta ahora."
+msgstr "No post published at this moment."
+
+#: alexiamora/obras.php:9
+msgid "Obras"
+msgstr "Arts"
+
+#: alexiamora/obras.php:67 alexiamora/taxonomy-taxonomia_obras.php:78
+msgid "No hay ninguna obra publicada hasta ahora."
+msgstr "No post and no news published at this moment ¬¬."
+
+#: alexiamora/prensa.php:9
+msgid "Prensa y Noticias"
+msgstr "Prense and news"
+
+#: alexiamora/prensa.php:42
+msgid "Etiquetas: "
+msgstr "Tags: "
+
+#: alexiamora/prensa.php:56
+msgid "No hay ninguna entrada publicada hasta ahora."
+msgstr "No post and no news published at this moment ¬¬."
+
+#: alexiamora/single-default.php:53 alexiamora/single-eventos.php:90
+#: alexiamora/single-obras.php:45 alexiamora/single-post_type_obra.php:55
+msgid "Anterior: "
+msgstr "Back: "
+
+#: alexiamora/single-default.php:58 alexiamora/single-eventos.php:95
+#: alexiamora/single-obras.php:50 alexiamora/single-post_type_obra.php:60
+msgid "Siguiente: "
+msgstr "Next: "
+
+#: alexiamora/single-default.php:67
+msgid "No hay nada."
+msgstr "No responses."
+
+#: alexiamora/single-eventos.php:82
+msgid "Ubicación del evento"
+msgstr "Event location"
+
+#, fuzzy
+#~ msgid "Categorías de Eventos"
+#~ msgstr "of"
+
+#, fuzzy
+#~ msgid "Todos los items"
+#~ msgstr ". All rights reserveds."
+
+#~ msgid "Foto de: "
+#~ msgstr "Photo of "
+
+#~ msgid "Logo de: "
+#~ msgstr "Logo of: "

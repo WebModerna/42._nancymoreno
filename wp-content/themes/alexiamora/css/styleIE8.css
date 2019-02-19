@@ -1,0 +1,30 @@
+footer .ir_arriba,
+form,
+form input[type="submit"],
+.index article,
+.posts article,
+.ver_mas,
+.navegacion_principal .sub-menu li
+{
+	background: url('../img/transparent.png');
+}
+form textarea, form input
+{
+	background: #333;
+}
+footer
+{
+	background: rgb(235,50,20);
+}
+#wrapper
+{
+	background: url('../img/transparent.png');
+}
+article figure a:hover img
+{
+	filter: alpha(opacity=50);
+}
+.ir_arriba
+{
+	filter: none !important;
+}
