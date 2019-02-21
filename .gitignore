@@ -15,11 +15,11 @@ wp-content/languages
 /readme.html
 /sitemap.xml
 /sitemap.xml.gz
-*.html
+# *.html
 *.txt
 *.php
-# *.rar
-# *.zip
+*.rar
+*.zip
 wp-admin
 wp-includes
 wp-content/uploads/wpcf7_captcha
