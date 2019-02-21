@@ -1,0 +1,60 @@
+<?php
+/*
+* single-obras.php
+* @package WordPress
+* @subpackage alexiamora
+* @since alexiamora 1.0
+*/
+get_header();?>
+			<h2><?php _e('Obra Artística: ', 'alexiamora'); single_term_title();?></h2>
+		</div><!-- .encabezado -->
+	</header>
+<section class="posts">
+<?php if (have_posts()):while(have_posts()):the_post();?>
+	<article class="fondo_negro">
+		<h2><?php the_title();?></h2>
+		<figure>
+			<?php if(wpmd_is_notphone()) { ?>
+				<?php
+					if( has_post_thumbnail() ) {
+						the_post_thumbnail('custom-thumb-1800-x');
+					} else {
+						echo '<img src="'.get_stylesheet_directory_uri().'/img/nota.jpg" alt="'.__('Sin imagen', 'alexiamora').'" />';
+					};
+				?>
+			<?php } else { ?>
+				<?php
+					if( has_post_thumbnail() ) {
+						the_post_thumbnail('custom-thumb-600-x');
+					} else {
+						echo '<img src="'.get_stylesheet_directory_uri().'/img/nota.jpg" alt="'.__('Sin imagen', 'alexiamora').'" />';
+					};
+				?>
+			<?php };?>
+			<figcaption>
+				<?php the_title();?>
+			</figcaption>
+		</figure>
+		<div class="contenido">
+			<?php the_content();?>
+		</div>
+	</article>
+	<article class="navegacion_posts fondo_oscuro">
+		<?php if(get_previous_post_link([0])!='') { ?>
+		<p>
+			<?php echo _e("Anterior: ", "alexiamora");?><span class="ver_mas"><?php previous_post_link();?></span>
+		</p>
+		<?php };
+		if(get_next_post_link([0])!='') { ?>
+		<p>
+			<?php echo _e("Siguiente: ", "alexiamora");?><span class="ver_mas"><?php next_post_link();?></span>
+		</p>
+		<?php };?>
+	</article>
+	<article class="listado_comentarios fondo_oscuro">
+		<?php comments_template();?>
+	</article>
+
+<?php endwhile; endif;?>
+</section>
+<?php get_footer();?>
