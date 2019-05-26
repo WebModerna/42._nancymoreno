@@ -23,7 +23,7 @@
 				echo $briografia_web;
 			};*/?>
 		</article> -->
-		<?php include_once "includes/slider.php"; ?>
+		<?php // include_once "includes/slider.php"; ?>
 	</section>
 
 <?php get_footer();?>
